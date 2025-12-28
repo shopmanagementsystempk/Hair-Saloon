@@ -15,6 +15,7 @@ const Appointment = () => {
         notes: ''
     });
 
+    const [formErrors, setFormErrors] = useState({});
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState('');
@@ -37,15 +38,61 @@ const Appointment = () => {
         '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM'
     ];
 
+    const validateForm = () => {
+        const errors = {};
+        const phoneRegex = /^\+?[\d\s-]{10,}$/;
+
+        if (!formData.name.trim()) {
+            errors.name = 'Name is required';
+        } else if (formData.name.trim().length < 3) {
+            errors.name = 'Name must be at least 3 characters';
+        }
+
+        if (!formData.phone.trim()) {
+            errors.phone = 'Phone number is required';
+        } else if (!phoneRegex.test(formData.phone)) {
+            errors.phone = 'Please enter a valid phone number';
+        }
+
+        if (!formData.service) {
+            errors.service = 'Please select a service';
+        }
+
+        if (!formData.date) {
+            errors.date = 'Please select a date';
+        }
+
+        if (!formData.time) {
+            errors.time = 'Please select a time';
+        }
+
+        setFormErrors(errors);
+        return Object.keys(errors).length === 0;
+    };
+
     const handleChange = (e) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: value
         });
+
+        // Clear error when user starts typing/selecting
+        if (formErrors[name]) {
+            setFormErrors({
+                ...formErrors,
+                [name]: ''
+            });
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!validateForm()) {
+            return;
+        }
+
         setLoading(true);
         setError('');
         setSuccess(false);
@@ -66,6 +113,7 @@ const Appointment = () => {
                 time: '',
                 notes: ''
             });
+            setFormErrors({});
 
             setTimeout(() => setSuccess(false), 5000);
         } catch (err) {
@@ -130,9 +178,12 @@ const Appointment = () => {
                                                         value={formData.name}
                                                         onChange={handleChange}
                                                         placeholder="Enter your full name"
-                                                        required
+                                                        isInvalid={!!formErrors.name}
                                                         className="custom-input"
                                                     />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.name}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
@@ -148,9 +199,12 @@ const Appointment = () => {
                                                         value={formData.phone}
                                                         onChange={handleChange}
                                                         placeholder="+92 300 1234567"
-                                                        required
+                                                        isInvalid={!!formErrors.phone}
                                                         className="custom-input"
                                                     />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.phone}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
@@ -164,7 +218,7 @@ const Appointment = () => {
                                                         name="service"
                                                         value={formData.service}
                                                         onChange={handleChange}
-                                                        required
+                                                        isInvalid={!!formErrors.service}
                                                         className="custom-input"
                                                     >
                                                         <option value="">Choose a service...</option>
@@ -174,6 +228,9 @@ const Appointment = () => {
                                                             </option>
                                                         ))}
                                                     </Form.Select>
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.service}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
@@ -189,9 +246,12 @@ const Appointment = () => {
                                                         value={formData.date}
                                                         onChange={handleChange}
                                                         min={new Date().toISOString().split('T')[0]}
-                                                        required
+                                                        isInvalid={!!formErrors.date}
                                                         className="custom-input"
                                                     />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.date}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
@@ -205,7 +265,7 @@ const Appointment = () => {
                                                         name="time"
                                                         value={formData.time}
                                                         onChange={handleChange}
-                                                        required
+                                                        isInvalid={!!formErrors.time}
                                                         className="custom-input"
                                                     >
                                                         <option value="">Choose a time...</option>
@@ -215,6 +275,9 @@ const Appointment = () => {
                                                             </option>
                                                         ))}
                                                     </Form.Select>
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.time}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
