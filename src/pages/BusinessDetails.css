@@ -1,0 +1,160 @@
+.statement-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #ffc107;
+}
+
+.verification-icon {
+    font-size: 4rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.statement-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+.statement-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.detail-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.detail-heading {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ffc107;
+    display: flex;
+    align-items: center;
+}
+
+.detail-heading svg {
+    color: #ffc107;
+}
+
+.detail-table {
+    margin: 0;
+}
+
+.detail-table td {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-table tr:last-child td {
+    border-bottom: none;
+}
+
+.label-col {
+    font-weight: 600;
+    color: #666;
+    width: 40%;
+}
+
+.value-col {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.status-badge {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.map-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.verification-notice {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.notice-icon {
+    font-size: 5rem;
+    color: #ffc107;
+}
+
+.notice-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffc107;
+    margin-bottom: 1rem;
+}
+
+.notice-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+@media (max-width: 991px) {
+    .label-col {
+        width: 45%;
+    }
+
+    .statement-title {
+        font-size: 1.6rem;
+    }
+
+    .statement-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .detail-table td {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    .label-col {
+        width: 100%;
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+
+    .value-col {
+        padding-left: 0 !important;
+        padding-bottom: 1rem;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+}

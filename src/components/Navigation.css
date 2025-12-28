@@ -1,0 +1,200 @@
+.professional-navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #ffc107 !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.brand-logo:hover {
+    color: #ffca2c !important;
+    transform: scale(1.05);
+}
+
+.brand-icon {
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+
+    0%,
+    90% {
+        transform: rotate(0deg);
+    }
+
+    95% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.brand-text {
+    letter-spacing: 1px;
+}
+
+.professional-navbar .nav-link {
+    color: #e0e0e0 !important;
+    font-weight: 500;
+    margin: 0 0.4rem;
+    padding: 0.5rem 0.8rem !important;
+    transition: all 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.professional-navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ffc107;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.professional-navbar .nav-link:hover::after,
+.professional-navbar .nav-link.active::after {
+    width: 80%;
+}
+
+.professional-navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.professional-navbar .nav-link.active {
+    color: #ffc107 !important;
+    font-weight: 600;
+}
+
+.appointment-btn {
+    font-weight: 600;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.appointment-btn:hover {
+    background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5);
+    transform: translateY(-2px);
+}
+
+/* 1. Large Tablet and Small Desktop optimization (992px to 1250px) */
+@media (min-width: 992px) and (max-width: 1250px) {
+    .brand-text {
+        font-size: 1.1rem;
+    }
+
+    .brand-icon {
+        font-size: 1.5rem;
+    }
+
+    .professional-navbar .nav-link {
+        margin: 0 0.1rem;
+        padding: 0.5rem 0.4rem !important;
+        font-size: 0.9rem;
+    }
+
+    .appointment-btn {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.85rem;
+        margin-left: 0.5rem !important;
+    }
+}
+
+/* 2. Mobile and Small Tablet (smaller than 992px) */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(26, 26, 26, 0.98);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1.5rem;
+        border-bottom: 3px solid #ffc107;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 0 0 15px 15px;
+        z-index: 1000;
+    }
+
+    .professional-navbar .nav-link {
+        margin: 0.5rem 0;
+        padding: 0.8rem 1.5rem !important;
+        text-align: center;
+        border-radius: 8px;
+        white-space: normal;
+    }
+
+    .professional-navbar .nav-link:hover {
+        background: rgba(255, 193, 7, 0.1);
+    }
+
+    .professional-navbar .nav-link::after {
+        display: none;
+    }
+
+    .appointment-btn {
+        width: 100%;
+        margin-top: 1.5rem !important;
+        padding: 1rem !important;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        border: 2px solid rgba(255, 193, 7, 0.5) !important;
+        padding: 0.4rem 0.6rem;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important;
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(79%) sepia(87%) saturate(354%) hue-rotate(1deg) brightness(105%) contrast(101%);
+    }
+
+    .brand-logo {
+        font-size: 1.2rem;
+    }
+
+    .brand-icon {
+        font-size: 1.6rem;
+    }
+}
+
+/* 3. Small Mobile Phones (< 400px) */
+@media (max-width: 400px) {
+    .brand-text {
+        font-size: 1rem;
+    }
+
+    .brand-icon {
+        font-size: 1.4rem;
+    }
+
+    .professional-navbar {
+        padding: 0.3rem 0;
+    }
+}

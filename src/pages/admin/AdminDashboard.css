@@ -1,0 +1,101 @@
+.admin-dashboard {
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.admin-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 2rem 0;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.admin-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffc107;
+    margin-bottom: 0.5rem;
+}
+
+.admin-subtitle {
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.stat-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #666;
+    font-weight: 600;
+    margin: 0;
+}
+
+.data-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.data-card .nav-tabs {
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.data-card .nav-link {
+    color: #666;
+    font-weight: 600;
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+
+.data-card .nav-link.active {
+    color: #ffc107;
+    background: transparent;
+    border-bottom-color: #ffc107;
+}
+
+.info-card {
+    border: 2px solid #ffc107;
+    border-radius: 15px;
+    background: #fffbf0;
+}
+
+.info-card h5 {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}

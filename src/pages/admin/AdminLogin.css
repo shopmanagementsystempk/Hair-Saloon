@@ -1,0 +1,57 @@
+.admin-login-page {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.login-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.login-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.login-icon-wrapper svg {
+    font-size: 2rem;
+    color: #1a1a1a;
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    color: #666;
+    font-weight: 600;
+    margin: 0;
+}
+
+.login-btn {
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+    border: none;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%);
+    box-shadow: 0 7px 20px rgba(255, 193, 7, 0.5);
+    transform: translateY(-2px);
+}
