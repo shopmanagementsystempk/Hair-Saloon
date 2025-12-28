@@ -267,7 +267,7 @@ const Appointment = () => {
                                     <h5 className="mb-3">Prefer to call?</h5>
                                     <p className="mb-2">
                                         <FaPhone className="me-2 text-warning" />
-                                        <strong>Phone:</strong> +92 300 1234567
+                                        <strong>Phone:</strong> +92 334-9549280, +92 333-5040799
                                     </p>
                                     <p className="mb-0">
                                         <strong>Working Hours:</strong> Monday - Saturday: 9:00 AM - 9:00 PM
