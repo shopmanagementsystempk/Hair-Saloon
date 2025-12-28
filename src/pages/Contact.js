@@ -26,6 +26,7 @@ const Contact = () => {
         message: ''
     });
 
+    const [formErrors, setFormErrors] = useState({});
     const [loading, setLoading] = useState(true);
     const [sendLoading, setSendLoading] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -48,15 +49,67 @@ const Contact = () => {
         }
     };
 
+    const validateForm = () => {
+        const errors = {};
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\+?[\d\s-]{10,}$/;
+
+        if (!formData.name.trim()) {
+            errors.name = 'Name is required';
+        } else if (formData.name.trim().length < 3) {
+            errors.name = 'Name must be at least 3 characters';
+        }
+
+        if (!formData.email.trim()) {
+            errors.email = 'Email is required';
+        } else if (!emailRegex.test(formData.email)) {
+            errors.email = 'Please enter a valid email address';
+        }
+
+        if (!formData.phone.trim()) {
+            errors.phone = 'Phone number is required';
+        } else if (!phoneRegex.test(formData.phone)) {
+            errors.phone = 'Please enter a valid phone number';
+        }
+
+        if (!formData.subject.trim()) {
+            errors.subject = 'Subject is required';
+        } else if (formData.subject.trim().length < 5) {
+            errors.subject = 'Subject must be at least 5 characters';
+        }
+
+        if (!formData.message.trim()) {
+            errors.message = 'Message is required';
+        } else if (formData.message.trim().length < 10) {
+            errors.message = 'Message must be at least 10 characters';
+        }
+
+        setFormErrors(errors);
+        return Object.keys(errors).length === 0;
+    };
+
     const handleChange = (e) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: value
         });
+        // Clear error when user starts typing
+        if (formErrors[name]) {
+            setFormErrors({
+                ...formErrors,
+                [name]: ''
+            });
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!validateForm()) {
+            return;
+        }
+
         setSendLoading(true);
         setError('');
         setSuccess(false);
@@ -75,6 +128,7 @@ const Contact = () => {
                 subject: '',
                 message: ''
             });
+            setFormErrors({});
 
             setTimeout(() => setSuccess(false), 5000);
         } catch (err) {
@@ -199,9 +253,12 @@ const Contact = () => {
                                                         value={formData.name}
                                                         onChange={handleChange}
                                                         placeholder="Enter your name"
-                                                        required
+                                                        isInvalid={!!formErrors.name}
                                                         className="custom-input"
                                                     />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.name}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
@@ -214,9 +271,12 @@ const Contact = () => {
                                                         value={formData.email}
                                                         onChange={handleChange}
                                                         placeholder="your@email.com"
-                                                        required
+                                                        isInvalid={!!formErrors.email}
                                                         className="custom-input"
                                                     />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.email}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
@@ -229,9 +289,12 @@ const Contact = () => {
                                                         value={formData.phone}
                                                         onChange={handleChange}
                                                         placeholder="+92 300 1234567"
-                                                        required
+                                                        isInvalid={!!formErrors.phone}
                                                         className="custom-input"
                                                     />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.phone}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
@@ -244,9 +307,12 @@ const Contact = () => {
                                                         value={formData.subject}
                                                         onChange={handleChange}
                                                         placeholder="Message subject"
-                                                        required
+                                                        isInvalid={!!formErrors.subject}
                                                         className="custom-input"
                                                     />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.subject}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
@@ -260,9 +326,12 @@ const Contact = () => {
                                                         value={formData.message}
                                                         onChange={handleChange}
                                                         placeholder="Write your message here..."
-                                                        required
+                                                        isInvalid={!!formErrors.message}
                                                         className="custom-input"
                                                     />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        {formErrors.message}
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Col>
 
