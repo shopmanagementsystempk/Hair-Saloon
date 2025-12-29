@@ -43,7 +43,7 @@ const About = () => {
             {/* Page Header */}
             <section className="page-header">
                 <Container>
-                    <h1 className="page-title">About SIGMA HAIR DRESSERS</h1>
+                    <h1 className="page-title">About SIGMA HAIR EXPERTS</h1>
                     <p className="page-subtitle">Professional Barber Services in Pakistan</p>
                 </Container>
             </section>
@@ -55,7 +55,7 @@ const About = () => {
                         <Col lg={6} className="mb-4 mb-lg-0">
                             <img
                                 src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&h=700&fit=crop"
-                                alt="SIGMA HAIR DRESSERS Shop"
+                                alt="SIGMA HAIR EXPERTS Shop"
                                 className="img-fluid rounded shadow-lg"
                             />
                         </Col>
@@ -63,7 +63,7 @@ const About = () => {
                             <div className="section-label">Our Story</div>
                             <h2 className="section-title">Established Barber Shop in Pakistan</h2>
                             <p className="section-description">
-                                SIGMA HAIR DRESSERS is a registered and fully operational barber shop located in Pakistan.
+                                SIGMA HAIR EXPERTS is a registered and fully operational barber shop located in Pakistan.
                                 We have been serving our community with professional grooming services since {info.established}, building
                                 a reputation for excellence and reliability.
                             </p>
@@ -136,7 +136,7 @@ const About = () => {
                                                 <span>{info.owner1Experience || '5+ Years of Professional Experience'}</span>
                                             </div>
                                             <p className="owner-bio">
-                                                {info.owner1Bio || "As the owner and lead barber of SIGMA HAIR DRESSERS, I bring over 5 years of professional experience in men's grooming and styling. I am committed to providing the highest quality services to every customer who walks through our doors."}
+                                                {info.owner1Bio || "As the owner and lead barber of SIGMA HAIR EXPERTS, I bring over 5 years of professional experience in men's grooming and styling. I am committed to providing the highest quality services to every customer who walks through our doors."}
                                             </p>
                                         </Col>
                                     </Row>
@@ -168,7 +168,7 @@ const About = () => {
                                                 <span>{info.owner2Experience || '5+ Years of Professional Business Management'}</span>
                                             </div>
                                             <p className="owner-bio">
-                                                {info.owner2Bio || 'As the owner at SIGMA HAIR DRESSERS, I focus on operational excellence and customer satisfaction. Our goal is to maintain the highest standards of professional grooming services in Pakistan and ensure every client receives premium care.'}
+                                                {info.owner2Bio || 'As the owner at SIGMA HAIR EXPERTS, I focus on operational excellence and customer satisfaction. Our goal is to maintain the highest standards of professional grooming services in Pakistan and ensure every client receives premium care.'}
                                             </p>
                                             {(info.owner2Bio2 || !info.owner2Bio) && (
                                                 <p className="owner-bio">
@@ -191,7 +191,7 @@ const About = () => {
                         <div className="section-label">Our Values</div>
                         <h2 className="section-title">Mission & Core Values</h2>
                         <p className="section-description mx-auto" style={{ maxWidth: '700px' }}>
-                            At SIGMA HAIR DRESSERS, we are guided by principles that ensure quality,
+                            At SIGMA HAIR EXPERTS, we are guided by principles that ensure quality,
                             professionalism, and customer satisfaction.
                         </p>
                     </div>
@@ -295,7 +295,7 @@ const About = () => {
                 <Container>
                     <div className="text-center mb-5">
                         <div className="section-label" style={{ color: '#ffc107' }}>Credibility</div>
-                        <h2 className="section-title text-white">Why Customers Trust SIGMA HAIR DRESSERS</h2>
+                        <h2 className="section-title text-white">Why Customers Trust SIGMA HAIR EXPERTS</h2>
                     </div>
 
                     <Row>
@@ -304,7 +304,7 @@ const About = () => {
                                 <div className="trust-number">01</div>
                                 <h4>Registered Business</h4>
                                 <p>
-                                    SIGMA HAIR DRESSERS is a legally registered business operating in full compliance
+                                    SIGMA HAIR EXPERTS is a legally registered business operating in full compliance
                                     with Pakistani business regulations. Our registration details are available for
                                     verification.
                                 </p>
