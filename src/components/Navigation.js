@@ -17,7 +17,7 @@ const Navigation = () => {
             <Container>
                 <Navbar.Brand as={Link} to="/" className="brand-logo">
                     <FaCut className="brand-icon" />
-                    <span className="brand-text">SIGMA HAIR DRESSERS</span>
+                    <span className="brand-text">SIGMA HAIR EXPERTS</span>
                 </Navbar.Brand>
                 <Navbar.Toggle
                     aria-controls="basic-navbar-nav"
