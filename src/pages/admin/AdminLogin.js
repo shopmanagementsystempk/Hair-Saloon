@@ -41,7 +41,7 @@ const AdminLogin = () => {
                                         <FaLock />
                                     </div>
                                     <h2 className="login-title">Admin Login</h2>
-                                    <p className="login-subtitle">SIGMA HAIR DRESSERS</p>
+                                    <p className="login-subtitle">SIGMA HAIR EXPERTS</p>
                                 </div>
 
                                 {error && (
