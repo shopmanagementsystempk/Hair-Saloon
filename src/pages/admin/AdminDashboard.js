@@ -21,7 +21,7 @@ const AdminDashboard = () => {
         name: 'SIGMA HAIR DRESSERS',
         type: 'Barber Shop / Hair Salon',
         industry: 'Personal Care & Grooming Services',
-        established: '2019',
+        established: '2025',
         status: 'Active & Operating',
         owners: 'Abdul Razaq & Raja Ahsan Haider',
         role: 'Owners & Professional Barbers',
