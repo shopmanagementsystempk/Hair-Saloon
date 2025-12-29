@@ -8,7 +8,7 @@ import './About.css';
 const About = () => {
     const [loading, setLoading] = useState(true);
     const [info, setInfo] = useState({
-        established: '2019',
+        established: '2025',
         income: 'PKR 1,000,000+',
         happyCustomers: '5000+',
         experience: '5+'
