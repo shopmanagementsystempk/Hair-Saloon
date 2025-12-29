@@ -15,42 +15,42 @@ const Testimonials = () => {
             name: 'Ahmed Khan',
             rating: 5,
             comment: 'Excellent service! The barbers are highly skilled and professional. I have been coming here for over 2 years and always leave satisfied.',
-            date: '2025-4-15'
+            date: '2024-12-15'
         },
         {
             id: 2,
             name: 'Muhammad Ali',
             rating: 5,
             comment: 'Best barber shop in the area. Clean environment, friendly staff, and great haircuts. Highly recommended!',
-            date: '2025-6-10'
+            date: '2024-12-10'
         },
         {
             id: 3,
             name: 'Hassan Raza',
             rating: 5,
             comment: 'Professional service at reasonable prices. The owner is very experienced and knows his craft well.',
-            date: '2025-6-05'
+            date: '2024-12-05'
         },
         {
             id: 4,
             name: 'Bilal Ahmed',
             rating: 5,
             comment: 'Great experience every time. They really care about customer satisfaction and deliver quality work.',
-            date: '2025-8-28'
+            date: '2024-11-28'
         },
         {
             id: 5,
             name: 'Usman Tariq',
             rating: 5,
             comment: 'Very professional and skilled barbers. The shop is well-maintained and hygienic. Will definitely come back!',
-            date: '2025-9-20'
+            date: '2024-11-20'
         },
         {
             id: 6,
             name: 'Faisal Mahmood',
             rating: 5,
             comment: 'Outstanding service! They take time to understand what you want and deliver exactly that. Highly professional.',
-            date: '2025-11-15'
+            date: '2024-11-15'
         }
     ];
 
@@ -104,7 +104,7 @@ const Testimonials = () => {
                         <div className="section-label">Reviews</div>
                         <h2 className="section-title">Trusted by Our Customers</h2>
                         <p className="section-description mx-auto" style={{ maxWidth: '700px' }}>
-                            Read what our satisfied customers have to say about their experience at SIGMA HAIR DRESSERS.
+                            Read what our satisfied customers have to say about their experience at SIGMA HAIR EXPERTS.
                         </p>
                     </div>
 
