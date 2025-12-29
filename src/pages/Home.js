@@ -55,7 +55,7 @@ const Home = () => {
                             <div className="intro-image-wrapper">
                                 <div className="intro-badge">
                                     <FaCut className="me-2" />
-                                    Since 2019
+                                    Since 2025
                                 </div>
                                 <img
                                     src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=700&fit=crop"
