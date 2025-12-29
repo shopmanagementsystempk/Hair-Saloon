@@ -18,7 +18,7 @@ const Home = () => {
                                 Professional Grooming Services
                             </div>
                             <h1 className="hero-title">
-                                SIGMA HAIR DRESSERS
+                                SIGMA HAIR EXPERTS
                             </h1>
                             <h2 className="hero-subtitle">
                                 Premium Barber Services in Pakistan
@@ -55,7 +55,7 @@ const Home = () => {
                             <div className="intro-image-wrapper">
                                 <div className="intro-badge">
                                     <FaCut className="me-2" />
-                                    Since 2025
+                                    Since 2019
                                 </div>
                                 <img
                                     src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=700&fit=crop"
@@ -66,9 +66,9 @@ const Home = () => {
                         </Col>
                         <Col lg={6}>
                             <div className="section-label">About Our Business</div>
-                            <h2 className="section-title">Welcome to SIGMA HAIR DRESSERS</h2>
+                            <h2 className="section-title">Welcome to SIGMA HAIR EXPERTS</h2>
                             <p className="section-description">
-                                SIGMA HAIR DRESSERS is a well-established, professional barber shop operating in Pakistan.
+                                SIGMA HAIR EXPERTS is a well-established, professional barber shop operating in Pakistan.
                                 We are committed to providing premium grooming services that meet international standards.
                             </p>
                             <p className="section-description">
@@ -113,7 +113,7 @@ const Home = () => {
                         <div className="section-label">Why Choose Us</div>
                         <h2 className="section-title">Professional Barber Services You Can Trust</h2>
                         <p className="section-description mx-auto" style={{ maxWidth: '700px' }}>
-                            SIGMA HAIR DRESSERS is a legitimate, operating business in Pakistan,
+                            SIGMA HAIR EXPERTS is a legitimate, operating business in Pakistan,
                             providing professional grooming services with verified credentials.
                         </p>
                     </div>
