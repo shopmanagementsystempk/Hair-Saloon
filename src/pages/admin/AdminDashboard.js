@@ -132,7 +132,7 @@ const AdminDashboard = () => {
                     <Row className="align-items-center">
                         <Col>
                             <h2 className="admin-title">Admin Dashboard</h2>
-                            <p className="admin-subtitle">SIGMA HAIR DRESSERS Management Panel</p>
+                            <p className="admin-subtitle">SIGMA HAIR EXPERTS Management Panel</p>
                         </Col>
                         <Col xs="auto">
                             <Button variant="outline-light" onClick={handleLogout}>
