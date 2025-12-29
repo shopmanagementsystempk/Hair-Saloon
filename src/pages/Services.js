@@ -145,7 +145,7 @@ const Services = () => {
                         <div className="section-label">What We Offer</div>
                         <h2 className="section-title">Premium Barber Services</h2>
                         <p className="section-description mx-auto" style={{ maxWidth: '700px' }}>
-                            At SIGMA HAIR DRESSERS, we offer a comprehensive range of professional grooming services.
+                            At SIGMA HAIR EXPERTS, we offer a comprehensive range of professional grooming services.
                             All prices are transparent and competitive, ensuring you receive excellent value for premium quality.
                         </p>
                     </div>
