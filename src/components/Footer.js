@@ -14,7 +14,7 @@ const Footer = () => {
                     <Col lg={4} md={6} className="mb-4 mb-lg-0">
                         <div className="footer-brand">
                             <FaCut className="footer-brand-icon" />
-                            <h4>SIGMA HAIR DRESSERS</h4>
+                            <h4>SIGMA HAIR EXPERTS</h4>
                         </div>
                         <p className="footer-description">
                             Professional barber services in Pakistan. We provide premium grooming experiences with skilled professionals dedicated to excellence.
@@ -74,7 +74,7 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <Row>
                         <Col md={6} className="text-center text-md-start mb-2 mb-md-0">
-                            <p>&copy; 2025 SIGMA HAIR DRESSERS. All Rights Reserved.</p>
+                            <p>&copy; 2019 SIGMA HAIR EXPERTS. All Rights Reserved.</p>
                         </Col>
                         <Col md={6} className="text-center text-md-end">
                             <p className="footer-tagline">Professional Barber Services – Pakistan</p>
